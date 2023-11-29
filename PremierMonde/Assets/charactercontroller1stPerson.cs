@@ -5,16 +5,26 @@ using UnityEngine;
 
 public class charactercontroller1stPerson : MonoBehaviour
 {
-    public byte Sensibility = 13;
+    public byte sensibility = 13;
+    private int soundsDuration = 60;
+
+    private int timer;
 
     private Transform T_Camera;
+    private Collider SoundsRange;
     private CharacterController CC_3rdPerson;
 
     // Start is called before the first frame update
     void Start()
     {
         T_Camera = this.transform.GetChild(0);
+        SoundsRange = this.transform.GetChild(2).GetComponent<Collider>();
+
+        timer = soundsDuration;
+
         CC_3rdPerson = this.GetComponent<CharacterController>();
+
+        SoundsRange.enabled = false;
     }
 
     // Update is called once per frame
@@ -22,13 +32,17 @@ public class charactercontroller1stPerson : MonoBehaviour
     {
 
         // Contrôle de la touche A pour lancer un echo
-        /*
         if (Input.GetButtonUp("Fire1"))
         {
-            if (Echo == null)
-                return;
-            GameObject.Instantiate(Echo).position = this.transform.position;
-        }*/
+            if (SoundsRange.enabled == true)
+            {
+                StopCoroutine(Drum());
+                SoundsRange.enabled = false;
+            }
+                
+
+            StartCoroutine(Drum());
+        }
     }
 
     // Update is called once per frame
@@ -37,7 +51,7 @@ public class charactercontroller1stPerson : MonoBehaviour
         // Contrôle de la camera
         if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
         {
-            T_Camera.localEulerAngles = new Vector3(T_Camera.localEulerAngles.x - Input.GetAxis("Mouse Y") * Sensibility, T_Camera.localEulerAngles.y + Input.GetAxis("Mouse X") * Sensibility, 0);
+            T_Camera.localEulerAngles = new Vector3(T_Camera.localEulerAngles.x - Input.GetAxis("Mouse Y") * sensibility, T_Camera.localEulerAngles.y + Input.GetAxis("Mouse X") * sensibility, 0);
         }
 
         // Contrôle les déplacements
@@ -48,5 +62,21 @@ public class charactercontroller1stPerson : MonoBehaviour
             CC_3rdPerson.Move(Quaternion.Euler(0, T_Camera.localEulerAngles.y, 0) * Direction);
             CC_3rdPerson.Move(Vector3.down);
         }
+    }
+
+    IEnumerator Drum()
+    {
+        timer = soundsDuration;
+        SoundsRange.enabled = true;
+
+        while (timer > 0)
+        {
+            timer--;
+            yield return new WaitForSeconds(Time.deltaTime);
+            Debug.Log(timer);
+        }
+
+        SoundsRange.enabled = false;
+        Debug.Log("OFF");
     }
 }
