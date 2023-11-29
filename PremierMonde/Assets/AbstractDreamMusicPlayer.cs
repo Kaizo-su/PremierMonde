@@ -24,6 +24,7 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
     void Start()
     {
         timer = - validationRange;
+        silenceBetweenLoops -= validationRange;
         EchoWaveGenerator = this.transform.GetChild(0).GetComponent<ParticleSystem>();
     }
 
