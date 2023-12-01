@@ -14,15 +14,23 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
     public float[] Partition;
 
     private int timer;
+    private int id;
     private int index = 0;
     private int validation = 0;
     private bool isPlaying = false;
 
     private ParticleSystem EchoWaveGenerator;
 
+    private static bool[] IDs;
+
     // Start is called before the first frame update
     void Start()
     {
+        id = (IDs == null ? 0 : IDs.Length);
+        Array.Resize(ref IDs, ++ id);
+
+        Debug.Log("mon id est " + id);
+        Debug.Log("Ids = " + IDs.Length);
         timer = - validationRange;
         silenceBetweenLoops -= validationRange;
         EchoWaveGenerator = this.transform.GetChild(0).GetComponent<ParticleSystem>();
