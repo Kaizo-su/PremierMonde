@@ -1,14 +1,14 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class charactercontroller1stPerson : MonoBehaviour
 {
     public byte sensibility = 13;
-    private int soundsDuration = 60;
 
+    private int soundsDuration = 15;
     private int timer;
+    private bool Action = false;
 
     private Transform T_Camera;
     private Collider SoundsRange;
@@ -32,20 +32,13 @@ public class charactercontroller1stPerson : MonoBehaviour
     {
 
         // Contrôle de la touche A pour lancer un echo
-        if (Input.GetButtonUp("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
-            if (SoundsRange.enabled == true)
-            {
-                StopCoroutine(Drum());
-                SoundsRange.enabled = false;
-            }
-                
-
-            StartCoroutine(Drum());
+            Action = true;
         }
     }
 
-    // Update is called once per frame
+    // Update is called once per fixed frame
     void FixedUpdate()
     {
         // Contrôle de la camera
@@ -62,21 +55,34 @@ public class charactercontroller1stPerson : MonoBehaviour
             CC_3rdPerson.Move(Quaternion.Euler(0, T_Camera.localEulerAngles.y, 0) * Direction);
             CC_3rdPerson.Move(Vector3.down);
         }
+
+        // Contrôle de la touche Action pour lancer un echo
+        if (Action)
+        {
+            Action = false;
+            if (SoundsRange.enabled == true)
+            {
+                Debug.Log("Drum interupted");
+                StopCoroutine(Drum());
+                SoundsRange.enabled = false;
+            }
+            StartCoroutine(Drum());
+        }
     }
 
     IEnumerator Drum()
     {
         timer = soundsDuration;
         SoundsRange.enabled = true;
+        Debug.Log("Drum ! ON");
 
-        while (timer > 0)
+        while (timer >= 0)
         {
             timer--;
-            yield return new WaitForSeconds(Time.deltaTime);
-            Debug.Log(timer);
+            yield return new WaitForFixedUpdate();
         }
 
         SoundsRange.enabled = false;
-        Debug.Log("OFF");
+        Debug.Log("Drum ! OFF");
     }
 }
