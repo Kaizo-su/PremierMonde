@@ -73,10 +73,8 @@ public class charactercontroller1stPerson : MonoBehaviour
         {
             timer--;
             yield return new WaitForSeconds(Time.deltaTime);
-            Debug.Log(timer);
         }
 
         SoundsRange.enabled = false;
-        Debug.Log("OFF");
     }
 }
