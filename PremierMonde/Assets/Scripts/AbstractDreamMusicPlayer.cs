@@ -21,16 +21,21 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
 
     private ParticleSystem EchoWaveGenerator;
 
+    private static GameObject MusicMaster;
     private static bool[] IDs;
 
     // Start is called before the first frame update
     void Start()
     {
-        id = (IDs == null ? 0 : IDs.Length);
-        Array.Resize(ref IDs, ++ id);
+        if(MusicMaster == null)
+        {
+            MusicMaster = GameObject.Find("AbstractDreamMusicMaster");
+            MusicMaster.SetActive(false);
+        }
 
-        Debug.Log("mon id est " + id);
-        Debug.Log("Ids = " + IDs.Length);
+        id = (IDs == null ? 0 : IDs.Length);
+        Array.Resize(ref IDs, id + 1);
+
         timer = - validationRange;
         silenceBetweenLoops -= validationRange;
         EchoWaveGenerator = this.transform.GetChild(0).GetComponent<ParticleSystem>();
@@ -67,11 +72,6 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
         // Manage Clock
         timer++;
 
-        // Victory condition
-        if(validation == Partition.Length)
-        {
-            Debug.Log("CONGLATULATION !!!");
-        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -79,8 +79,34 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
 
         if (isPlaying)
         {
-            Debug.Log("VALIDE !");
+            Debug.Log(id + " est VALIDE !");
             validation++;
+
+
+            // Victory validation
+            if (validation == Partition.Length)
+            {
+
+                Debug.Log("Melodie " + id + " est complete !!!");
+                if (id == 0 || IDs[id - 1] == true)
+                {
+                    IDs[id] = true;
+                    this.GetComponent<Renderer>().material.color = Color.green;
+
+                    foreach(bool i in IDs)
+                    {
+                        Debug.Log(i);
+
+                        if (!i)
+                        {
+                            Debug.Log("C'est pas tout complet");
+                            return;
+                        }
+                    }
+                    Debug.Log("CONGLATULATION !!!");
+                    MusicMaster.SetActive(true);
+                }
+            }
         }
     }
 }

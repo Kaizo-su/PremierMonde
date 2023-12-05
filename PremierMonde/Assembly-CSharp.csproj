@@ -60,9 +60,10 @@
     <Analyzer Include="A:\programs\Unity\2022.3.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AbstractDreamMusicPlayer.cs" />
     <Compile Include="Assets\Scripts\XRPlatformControllerSetup.cs" />
     <Compile Include="Assets\Scripts\TriggerTambour.cs" />
-    <Compile Include="Assets\AbstractDreamMusicPlayer.cs" />
+    <Compile Include="Assets\Scripts\AbstractDreamMusicMaster.cs" />
     <Compile Include="Assets\Scripts\charactercontroller1stPerson.cs" />
   </ItemGroup>
   <ItemGroup>
