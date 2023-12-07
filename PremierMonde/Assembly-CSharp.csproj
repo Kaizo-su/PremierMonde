@@ -63,23 +63,35 @@
     <Compile Include="Assets\Scripts\AbstractDreamMusicPlayer.cs" />
     <Compile Include="Assets\Scripts\XRPlatformControllerSetup.cs" />
     <Compile Include="Assets\Scripts\TriggerTambour.cs" />
+    <Compile Include="Assets\Scripts\AbstractDreamMusicMaster.cs" />
     <Compile Include="Assets\Scripts\PlayerTracker.cs" />
     <Compile Include="Assets\Scripts\charactercontroller1stPerson.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Workspace.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{50a55bbd-5a2a-40b3-85f8-ee631fb3e501}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\EffectPresetFolder\{12cc17d5-4995-4e7c-8830-cf353f792600}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\SandboxFolder\{fa1c7e98-5195-482a-9b0b-2baa5e527967}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{82e57734-73b5-4588-b8e7-23a34912dc66}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\SnapshotGroup\{5e614fd3-58c9-4ebd-ab24-0e0f989deb60}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Platform\{afe33dad-bb85-42bb-a948-c59d15189a9b}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Tags.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{6ca2bab8-ce48-4269-b636-8b75f0f9b76d}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{40f13555-2f6e-4302-b9ca-d87cecc9df98}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\EncodingSetting\{a9a1ab8d-1584-4865-9726-8f4d3f7dff95}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Return\{a08b0bcb-56d2-4960-be49-47b3e6435454}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{d3669318-f303-46df-8745-3bcf815433a7}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{708f38ef-5853-4352-b5d7-9fa5ca6b048e}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{cf2f9dda-ef7e-4c9d-8f08-54d83119952d}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{8e9402ae-7f73-417b-a89c-72ea33529e35}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{e2fd34bf-1ab1-4875-9a7f-43e105a0df05}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Bank\{261f662b-d7ff-4bce-b26b-ba4d69d41e87}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{24fce2ab-e2de-4d40-9a80-3a9c095820a7}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{c807a970-6daa-4274-bf89-a84e8a7a0a2c}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Mixer.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Master.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{c2585dea-d12f-4c0a-a665-7bdd614babf8}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{76ec741e-c62f-4aa1-8876-44b39bbae65f}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Asset\{85b91bb8-45cc-4eca-b281-d3ee15b305c5}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\BankFolder\{f76fa5b6-f8e6-466f-bb3c-44d2ec72838b}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\EventFolder\{41bc5c68-4063-4a22-860c-16b0852b5577}.xml" />

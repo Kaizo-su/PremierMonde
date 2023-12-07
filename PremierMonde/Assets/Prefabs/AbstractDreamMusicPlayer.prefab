@@ -4902,6 +4902,7 @@ GameObject:
   - component: {fileID: 7123901487411623260}
   - component: {fileID: 3393147635486124087}
   - component: {fileID: 8086408303038569420}
+  - component: {fileID: 3460915062753955108}
   m_Layer: 0
   m_Name: AbstractDreamMusicPlayer
   m_TagString: Untagged
@@ -5040,6 +5041,38 @@ MonoBehaviour:
   melodyDuration: 60
   validationRange: 10
   silenceBetweenLoops: 60
+  melody: 
   Partition:
   - 0
   - 0.5
+--- !u!114 &3460915062753955108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8662085614218097514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1353014205
+      Data2: 1085495850
+      Data3: 1676605573
+      Data4: 31830815
+    Path: event:/default
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 10

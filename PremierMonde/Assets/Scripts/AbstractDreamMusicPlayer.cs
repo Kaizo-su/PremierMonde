@@ -1,14 +1,17 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Tutorials.Core.Editor;
 using UnityEngine;
+using FMODUnity;
+using FMODUnityResonance;
 
 public class AbstractDreamMusicPlayer : MonoBehaviour
 {
     public int melodyDuration;
     public int validationRange;
-    public int silenceBetweenLoops;
+	public int silenceBetweenLoops;
+	//public string melody;
 
     [Range(0, 1)]
     public float[] Partition;
@@ -17,9 +20,11 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
     private int id;
     private int index = 0;
     private int validation = 0;
-    private bool isPlaying = false;
+	private bool isPlaying = false;
 
-    private ParticleSystem EchoWaveGenerator;
+
+	private ParticleSystem EchoWaveGenerator;
+	private StudioEventEmitter fmodMelody;
 
     private static GameObject MusicMaster;
     private static bool[] IDs;
@@ -34,7 +39,9 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
         }
 
         id = (IDs == null ? 0 : IDs.Length);
-        Array.Resize(ref IDs, id + 1);
+	    Array.Resize(ref IDs, id + 1);
+        
+	    fmodMelody = this.GetComponent<StudioEventEmitter>();
 
         timer = - validationRange;
         silenceBetweenLoops -= validationRange;
@@ -57,13 +64,21 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
             EchoWaveGenerator.Play();
         }
 
-        // Manage Melody
+	    // Manage Melody
+	    
+	    if (timer == 0 ){
+	    	//Debug.Log ("quoicoubeh");
+	    	//FMODUnity.RuntimeManager.PlayOneShot("event:/" + melody);
+	    	fmodMelody.Play();
+	    	
+	    }
+        
         if (index < Partition.Length && timer == (int) (Partition[index] * melodyDuration))
         {
             
             isPlaying = true;
             index++;
-        }
+        }    
         else
         {
             isPlaying = false;

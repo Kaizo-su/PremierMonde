@@ -1,5 +1,86 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6505934605048397523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/dreamMelody_final
+  m_EditorClassIdentifier: 
+  Path: event:/dreamMelody_final
+  Guid:
+    Data1: 1888434415
+    Data2: 1129470035
+    Data3: -1516251211
+    Data4: -1912312886
+  Banks:
+  - {fileID: 2015090859716017203}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7222
+--- !u!114 &-3243232309350179277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/dreamMelody_fragment3
+  m_EditorClassIdentifier: 
+  Path: event:/dreamMelody_fragment3
+  Guid:
+    Data1: -748252392
+    Data2: 1189081859
+    Data3: -818199161
+    Data4: -1489808255
+  Banks:
+  - {fileID: 2015090859716017203}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1724
+--- !u!114 &-3042020902113843796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/dreamMelody_fragment2
+  m_EditorClassIdentifier: 
+  Path: event:/dreamMelody_fragment2
+  Guid:
+    Data1: -1902902610
+    Data2: 1098612595
+    Data3: -361587544
+    Data4: 899568179
+  Banks:
+  - {fileID: 2015090859716017203}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1724
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17,12 +98,18 @@ MonoBehaviour:
   - {fileID: 2015090859716017203}
   EditorEvents:
   - {fileID: 7574354803157688306}
+  - {fileID: -3243232309350179277}
+  - {fileID: -3042020902113843796}
+  - {fileID: 4642225917007490104}
+  - {fileID: 4547409717355936443}
+  - {fileID: -6505934605048397523}
+  - {fileID: 2887501965249546322}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2015090859716017203}
   StringsBanks:
   - {fileID: 1735390884572268066}
-  cacheTime: 638375322497844310
+  cacheTime: 638375867234458483
   cacheVersion: 131609
 --- !u!114 &1735390884572268066
 MonoBehaviour:
@@ -39,10 +126,10 @@ MonoBehaviour:
   Path: Assets/Sound/PremierMonde_FMOD_project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638375322497844310
+  lastModified: 638375867234458483
   FileSizes:
   - Name: Desktop
-    Value: 758
+    Value: 1026
   Exists: 1
 --- !u!114 &2015090859716017203
 MonoBehaviour:
@@ -59,11 +146,92 @@ MonoBehaviour:
   Path: Assets/Sound/PremierMonde_FMOD_project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638375322497744046
+  lastModified: 638375867234424992
   FileSizes:
   - Name: Desktop
-    Value: 802592
+    Value: 934368
   Exists: 1
+--- !u!114 &2887501965249546322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/default
+  m_EditorClassIdentifier: 
+  Path: event:/default
+  Guid:
+    Data1: 1353014205
+    Data2: 1085495850
+    Data3: 1676605573
+    Data4: 31830815
+  Banks:
+  - {fileID: 2015090859716017203}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4547409717355936443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/dreamMelody_fragment4
+  m_EditorClassIdentifier: 
+  Path: event:/dreamMelody_fragment4
+  Guid:
+    Data1: -486722369
+    Data2: 1215634097
+    Data3: -515670118
+    Data4: 98541573
+  Banks:
+  - {fileID: 2015090859716017203}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2298
+--- !u!114 &4642225917007490104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/dreamMelody_fragment1
+  m_EditorClassIdentifier: 
+  Path: event:/dreamMelody_fragment1
+  Guid:
+    Data1: 1822603960
+    Data2: 1114230344
+    Data3: 1972057782
+    Data4: 1840773616
+  Banks:
+  - {fileID: 2015090859716017203}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1724
 --- !u!114 &7574354803157688306
 MonoBehaviour:
   m_ObjectHideFlags: 0
