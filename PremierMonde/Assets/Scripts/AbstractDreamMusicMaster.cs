@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.Tutorials.Core.Editor;
 using UnityEngine;
 
-public class AbstractDreamMusicPlayer : MonoBehaviour
+public class AbstractDreamMusicMaster : MonoBehaviour
 {
     public int melodyDuration;
     public int validationRange;
@@ -21,18 +21,11 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
 
     private ParticleSystem EchoWaveGenerator;
 
-    private static GameObject MusicMaster;
     private static bool[] IDs;
 
     // Start is called before the first frame update
     void Start()
     {
-        if(MusicMaster == null)
-        {
-            MusicMaster = GameObject.Find("AbstractDreamMusicMaster");
-            MusicMaster.SetActive(false);
-        }
-
         id = (IDs == null ? 0 : IDs.Length);
         Array.Resize(ref IDs, id + 1);
 
@@ -91,21 +84,17 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
                 if (id == 0 || IDs[id - 1] == true)
                 {
                     IDs[id] = true;
-                    this.GetComponent<Renderer>().material.color = Color.green;
 
                     foreach(bool i in IDs)
                     {
-                        Debug.Log(i);
-
                         if (!i)
                         {
                             Debug.Log("C'est pas tout complet");
                             return;
                         }
                     }
-                    Debug.Log("CONGLATULATION !!!");
-                    MusicMaster.SetActive(true);
                 }
+                Debug.Log("CONGLATULATION !!!");
             }
         }
     }

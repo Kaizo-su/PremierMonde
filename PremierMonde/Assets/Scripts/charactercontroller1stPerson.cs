@@ -6,8 +6,7 @@ using UnityEngine;
 public class charactercontroller1stPerson : MonoBehaviour
 {
     public byte sensibility = 13;
-    private int soundsDuration = 60;
-
+    private int soundsDuration = 20;
     private int timer;
 
     private Transform T_Camera;
@@ -72,7 +71,7 @@ public class charactercontroller1stPerson : MonoBehaviour
         while (timer > 0)
         {
             timer--;
-            yield return new WaitForSeconds(Time.deltaTime);
+            yield return new WaitForFixedUpdate();
         }
 
         SoundsRange.enabled = false;
