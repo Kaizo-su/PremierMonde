@@ -1472,7 +1472,7 @@ MonoBehaviour:
   m_Camera: {fileID: 548945855}
   m_OriginBaseGameObject: {fileID: 513826026}
   m_CameraFloorOffsetObject: {fileID: 1417185711}
-  m_RequestedTrackingOriginMode: 0
+  m_RequestedTrackingOriginMode: 2
   m_CameraYOffset: 0
 --- !u!4 &513826029
 Transform:
@@ -1483,7 +1483,7 @@ Transform:
   m_GameObject: {fileID: 513826026}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.2, z: 0}
+  m_LocalPosition: {x: 0, y: 1.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1924,8 +1924,8 @@ GameObject:
   m_Component:
   - component: {fileID: 548945852}
   - component: {fileID: 548945855}
-  - component: {fileID: 548945854}
   - component: {fileID: 548945853}
+  - component: {fileID: 548945856}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2057,14 +2057,6 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
---- !u!81 &548945854
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 548945851}
-  m_Enabled: 1
 --- !u!20 &548945855
 Camera:
   m_ObjectHideFlags: 0
@@ -2116,6 +2108,19 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &548945856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548945851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &603243840
 GameObject:
   m_ObjectHideFlags: 0
@@ -9051,6 +9056,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1454309436}
+  - component: {fileID: 1454309437}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
@@ -9076,6 +9082,37 @@ Transform:
   - {fileID: 896884799}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1454309437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454309435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -818962982
+      Data2: 1285418878
+      Data3: -665581425
+      Data4: 764746033
+    Path: event:/Campfire
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 16
 --- !u!1 &1498422732
 GameObject:
   m_ObjectHideFlags: 0
@@ -11153,6 +11190,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996632687}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2022053138 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8321938032840381775, guid: 0ed26e7bfc59c2142a2e4fdee7e25f18,
+    type: 3}
+  m_PrefabInstance: {fileID: 5312497013664492754}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2022053142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022053138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef81d0baac9f8384088aaa4c37988152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackedObject: {fileID: 0}
+  maxDistance: 10
+  moveSpeed: 20
+  updateSpeed: 10
+  currentDistance: 5
+  moveAxis: Mouse ScrollWheel
+  hideDistance: 1.5
 --- !u!1 &2075320861
 GameObject:
   m_ObjectHideFlags: 0
@@ -11739,6 +11801,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 311741141801421809, guid: 0ed26e7bfc59c2142a2e4fdee7e25f18,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.18
+      objectReference: {fileID: 0}
     - target: {fileID: 3220107087889144365, guid: 0ed26e7bfc59c2142a2e4fdee7e25f18,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -11814,7 +11881,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3220107087889144365, guid: 0ed26e7bfc59c2142a2e4fdee7e25f18,
@@ -11822,6 +11890,10 @@ PrefabInstance:
       insertIndex: 1
       addedObject: {fileID: 513826029}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8321938032840381775, guid: 0ed26e7bfc59c2142a2e4fdee7e25f18,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2022053142}
     - targetCorrespondingSourceObject: {fileID: 1910038467033674709, guid: 0ed26e7bfc59c2142a2e4fdee7e25f18,
         type: 3}
       insertIndex: -1
