@@ -55,14 +55,48 @@
     <UnityVersion>2022.3.14f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AbstractDreamMusicPlayer.cs" />
     <Compile Include="Assets\Scripts\XRPlatformControllerSetup.cs" />
     <Compile Include="Assets\Scripts\TriggerTambour.cs" />
+    <Compile Include="Assets\Scripts\AbstractDreamMusicMaster.cs" />
+    <Compile Include="Assets\Scripts\PlayerTracker.cs" />
     <Compile Include="Assets\Scripts\charactercontroller1stPerson.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Workspace.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{50a55bbd-5a2a-40b3-85f8-ee631fb3e501}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\EffectPresetFolder\{12cc17d5-4995-4e7c-8830-cf353f792600}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\SandboxFolder\{fa1c7e98-5195-482a-9b0b-2baa5e527967}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{82e57734-73b5-4588-b8e7-23a34912dc66}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\SnapshotGroup\{5e614fd3-58c9-4ebd-ab24-0e0f989deb60}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Platform\{afe33dad-bb85-42bb-a948-c59d15189a9b}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Tags.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{6ca2bab8-ce48-4269-b636-8b75f0f9b76d}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{40f13555-2f6e-4302-b9ca-d87cecc9df98}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\EncodingSetting\{a9a1ab8d-1584-4865-9726-8f4d3f7dff95}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Return\{a08b0bcb-56d2-4960-be49-47b3e6435454}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{d3669318-f303-46df-8745-3bcf815433a7}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{708f38ef-5853-4352-b5d7-9fa5ca6b048e}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{cf2f9dda-ef7e-4c9d-8f08-54d83119952d}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{8e9402ae-7f73-417b-a89c-72ea33529e35}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{e2fd34bf-1ab1-4875-9a7f-43e105a0df05}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Bank\{261f662b-d7ff-4bce-b26b-ba4d69d41e87}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{24fce2ab-e2de-4d40-9a80-3a9c095820a7}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{c807a970-6daa-4274-bf89-a84e8a7a0a2c}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Mixer.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Master.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{c2585dea-d12f-4c0a-a665-7bdd614babf8}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{76ec741e-c62f-4aa1-8876-44b39bbae65f}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Asset\{85b91bb8-45cc-4eca-b281-d3ee15b305c5}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\BankFolder\{f76fa5b6-f8e6-466f-bb3c-44d2ec72838b}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\EventFolder\{41bc5c68-4063-4a22-860c-16b0852b5577}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\ParameterPresetFolder\{843ddf21-910d-493d-b056-1943241b060d}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\ProfilerFolder\{4720f665-2841-494a-b925-b205b45c33ff}.xml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -395,18 +429,6 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.Types">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.Gradle">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.GradleProject">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.GradleProject.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">
@@ -897,28 +919,12 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.007">
-      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.007.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.XR.Management">
       <HintPath>Library\ScriptAssemblies\Unity.XR.Management.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.EditorCoroutines.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.XR.Interaction.Toolkit.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.Interaction.Toolkit.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEngineBridge.007">
-      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.007.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
@@ -929,60 +935,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.XR.Hands">
       <HintPath>Library\ScriptAssemblies\Unity.XR.Hands.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Tutorials.Core">
-      <HintPath>Library\ScriptAssemblies\Unity.Tutorials.Core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.XR.Hands.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.XR.Hands.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
@@ -997,36 +955,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.XR.CoreUtils.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.InputSystem">
-      <HintPath>Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.InputSystem.ForUI">
-      <HintPath>Library\ScriptAssemblies\Unity.InputSystem.ForUI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.XR.Oculus">
-      <HintPath>Library\ScriptAssemblies\Unity.XR.Oculus.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.XR.Management.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.Management.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.AI.Navigation.Updater">
-      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Mathematics">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.XR.CoreUtils.Editor">
@@ -1039,18 +973,6 @@
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.AI.Navigation.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Searcher.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
@@ -1069,8 +991,124 @@
       <HintPath>Library\ScriptAssemblies\Unity.XR.Interaction.Toolkit.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.007">
+      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.007.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.EditorCoroutines.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEngineBridge.007">
+      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.007.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.XR.LegacyInputHelpers">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.PlasticSCM.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Tutorials.Core">
+      <HintPath>Library\ScriptAssemblies\Unity.Tutorials.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.SpatialTracking">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualStudio.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.XR.Hands.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.XR.Hands.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.XR.LegacyInputHelpers">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.InputSystem.ForUI">
+      <HintPath>Library\ScriptAssemblies\Unity.InputSystem.ForUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.XR.Oculus">
+      <HintPath>Library\ScriptAssemblies\Unity.XR.Oculus.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Updater">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Searcher.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="FMODUnityEditor.csproj">
+      <Project>{7B2C8A78-CEAA-F274-34D1-7AF00F7E38C4}</Project>
+      <Name>FMODUnityEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="FMODUnityResonance.csproj">
+      <Project>{24436693-D6B3-2285-8D22-D46F9C53C56C}</Project>
+      <Name>FMODUnityResonance</Name>
+    </ProjectReference>
+    <ProjectReference Include="FMODUnity.csproj">
+      <Project>{DBFC3B75-5DD6-5B94-EC64-9BE4B271BC6A}</Project>
+      <Name>FMODUnity</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.csproj">
+      <Project>{F08D89FE-EF89-B330-6CD8-0F3214B1C349}</Project>
+      <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.Hands.Editor.csproj">
       <Project>{D417AEEC-7AE1-057D-9511-41E3CF46549F}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.Hands.Editor</Name>
@@ -1083,9 +1121,9 @@
       <Project>{4EC0C518-F28B-03DD-6735-8E55229E636E}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.csproj">
-      <Project>{F08D89FE-EF89-B330-6CD8-0F3214B1C349}</Project>
-      <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor</Name>
+    <ProjectReference Include="FMODUnityResonanceEditor.csproj">
+      <Project>{D899958E-10B0-6C4A-1F3B-22ABE5E195DA}</Project>
+      <Name>FMODUnityResonanceEditor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.Hands.csproj">
       <Project>{6F7D81FD-D845-B095-47FF-2D56DC3800BB}</Project>

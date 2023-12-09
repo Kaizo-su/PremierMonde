@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,8 +6,7 @@ using UnityEngine;
 public class charactercontroller1stPerson : MonoBehaviour
 {
     public byte sensibility = 13;
-    private int soundsDuration = 60;
-
+    private int soundsDuration = 20;
     private int timer;
 
     private Transform T_Camera;
@@ -18,7 +17,7 @@ public class charactercontroller1stPerson : MonoBehaviour
     void Start()
     {
         T_Camera = this.transform.GetChild(0);
-        SoundsRange = this.transform.GetChild(2).GetComponent<Collider>();
+	    SoundsRange = this.transform.GetChild(4).GetComponent<Collider>();
 
         timer = soundsDuration;
 
@@ -31,7 +30,7 @@ public class charactercontroller1stPerson : MonoBehaviour
     void Update()
     {
 
-        // Contrôle de la touche A pour lancer un echo
+        // Contrï¿½le de la touche A pour lancer un echo
         if (Input.GetButtonUp("Fire1"))
         {
             if (SoundsRange.enabled == true)
@@ -48,13 +47,13 @@ public class charactercontroller1stPerson : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        // Contrôle de la camera
+        // Contrï¿½le de la camera
         if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
         {
             T_Camera.localEulerAngles = new Vector3(T_Camera.localEulerAngles.x - Input.GetAxis("Mouse Y") * sensibility, T_Camera.localEulerAngles.y + Input.GetAxis("Mouse X") * sensibility, 0);
         }
 
-        // Contrôle les déplacements
+        // Contrï¿½le les dï¿½placements
         if (Math.Abs(Input.GetAxis("Horizontal")) > 0.1 || Math.Abs(Input.GetAxis("Vertical")) > 0.1)
         {
             Vector3 Direction = (new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) / 5);
@@ -72,11 +71,9 @@ public class charactercontroller1stPerson : MonoBehaviour
         while (timer > 0)
         {
             timer--;
-            yield return new WaitForSeconds(Time.deltaTime);
-            Debug.Log(timer);
+            yield return new WaitForFixedUpdate();
         }
 
         SoundsRange.enabled = false;
-        Debug.Log("OFF");
     }
 }
