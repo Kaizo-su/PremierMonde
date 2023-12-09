@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1751639787000014113}
   - component: {fileID: 5533144776262769001}
   - component: {fileID: 5747807294011035187}
-  - component: {fileID: 6758644101627160001}
   - component: {fileID: 427145933806357678}
+  - component: {fileID: 8772731530496292188}
   - component: {fileID: 7059695192168631273}
   m_Layer: 0
   m_Name: Baguette
@@ -115,27 +115,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &6758644101627160001
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7750516349104033756}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.025
-  m_Center: {x: 0, y: 0, z: 0.15}
 --- !u!136 &427145933806357678
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -155,10 +134,33 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.01
-  m_Height: 0.2
+  m_Radius: 0.008
+  m_Height: 0.18
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.08}
+--- !u!136 &8772731530496292188
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7750516349104033756}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.01
+  m_Height: 0.05
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.148}
 --- !u!114 &7059695192168631273
 MonoBehaviour:
   m_ObjectHideFlags: 0
