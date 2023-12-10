@@ -6,8 +6,15 @@ using UnityEngine;
 public class charactercontroller1stPerson : MonoBehaviour
 {
     public byte sensibility = 13;
+
     private int soundsDuration = 20;
+    private int turningAmplitude = 20;
     private int timer;
+
+    private float TurningSensibility = 0.5f;
+
+    private bool isTurning;
+
 
     private Transform T_Camera;
     private Collider SoundsRange;
@@ -65,9 +72,27 @@ public class charactercontroller1stPerson : MonoBehaviour
     void FixedUpdate()
     {
         // Contr�le de la camera
-        if (Math.Abs(Input.GetAxis("R_Horizontal")) > 0.1 )
+        /*if (Math.Abs(Input.GetAxis("R_Horizontal")) > 0.1 )
         {
             T_Camera.localEulerAngles = new Vector3(0, T_Camera.localEulerAngles.y + Input.GetAxis("R_Horizontal") * sensibility, 0);
+        }*/
+
+        if (!isTurning && Math.Abs(Input.GetAxis("R_Horizontal")) > TurningSensibility)
+        {
+            if (Input.GetAxis("R_Horizontal") > TurningSensibility)
+            {
+                T_Camera.localEulerAngles = new Vector3(0, T_Camera.localEulerAngles.y + turningAmplitude, 0);
+            }
+            else if(Input.GetAxis("R_Horizontal") < - TurningSensibility)
+            {
+                T_Camera.localEulerAngles = new Vector3(0, T_Camera.localEulerAngles.y - turningAmplitude, 0);
+            }
+            isTurning = true;
+        }
+
+        if (isTurning && Math.Abs(Input.GetAxis("R_Horizontal")) < TurningSensibility && Math.Abs(Input.GetAxis("R_Horizontal")) > - TurningSensibility)
+        {
+            isTurning = false;
         }
 
         // Contr�le les d�placements
