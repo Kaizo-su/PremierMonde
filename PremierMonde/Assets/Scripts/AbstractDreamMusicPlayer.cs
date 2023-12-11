@@ -94,7 +94,6 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
 
         if (isPlaying)
         {
-            Debug.Log(id + " est VALIDE !");
             validation++;
 
 
@@ -102,7 +101,6 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
             if (validation == Partition.Length)
             {
 
-                Debug.Log("Melodie " + id + " est complete !!!");
                 if (id == 0 || IDs[id - 1] == true)
                 {
                     IDs[id] = true;
@@ -114,11 +112,9 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
 
                         if (!i)
                         {
-                            Debug.Log("C'est pas tout complet");
                             return;
                         }
                     }
-                    Debug.Log("CONGLATULATION !!!");
                     MusicMaster.SetActive(true);
                 }
             }
