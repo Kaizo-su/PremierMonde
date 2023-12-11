@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.078210965, g: 0.10245547, b: 2.1081474, a: 1}
+  m_IndirectSpecularColor: {r: 0.078210965, g: 0.10232383, b: 2.1049902, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2598,6 +2598,7 @@ GameObject:
   - component: {fileID: 1074102988}
   - component: {fileID: 1074102989}
   - component: {fileID: 1074102990}
+  - component: {fileID: 1074102991}
   m_Layer: 0
   m_Name: Fireplace_1
   m_TagString: Untagged
@@ -2693,6 +2694,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1074102991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074102987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65683fa85b4eb444585188eddb9a1881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1082029256 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8363019468681290374, guid: 3062959908fc2a448890fadf056545a8,
@@ -7699,6 +7712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1282878450}
   - component: {fileID: 1282878451}
+  - component: {fileID: 1282878452}
   m_Layer: 0
   m_Name: Kid_3
   m_TagString: Untagged
@@ -7773,6 +7787,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1282878452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282878449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65683fa85b4eb444585188eddb9a1881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1288349279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8560,6 +8586,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1655113102}
   - component: {fileID: 1655113103}
+  - component: {fileID: 1655113104}
   m_Layer: 0
   m_Name: Kid_1
   m_TagString: Untagged
@@ -8634,6 +8661,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1655113104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655113101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65683fa85b4eb444585188eddb9a1881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1662271152
 GameObject:
   m_ObjectHideFlags: 0
@@ -8892,6 +8931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1679070860}
   - component: {fileID: 1679070861}
+  - component: {fileID: 1679070862}
   m_Layer: 0
   m_Name: Kid_2
   m_TagString: Untagged
@@ -8966,6 +9006,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1679070862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679070859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65683fa85b4eb444585188eddb9a1881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1755125037 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8363019468681290374, guid: 3062959908fc2a448890fadf056545a8,
@@ -10096,10 +10148,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 501264925681076234, guid: cab33b86918433b4ebc0fc0e5b1523a2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8104881772098563362, guid: cab33b86918433b4ebc0fc0e5b1523a2,
         type: 3}
       propertyPath: m_Name
       value: PlayerVR
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948524549118327362, guid: cab33b86918433b4ebc0fc0e5b1523a2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
