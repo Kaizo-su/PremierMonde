@@ -9698,6 +9698,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8006644079834615438, guid: cab33b86918433b4ebc0fc0e5b1523a2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Baguette
+      objectReference: {fileID: 0}
     - target: {fileID: 8104881772098563362, guid: cab33b86918433b4ebc0fc0e5b1523a2,
         type: 3}
       propertyPath: m_Name

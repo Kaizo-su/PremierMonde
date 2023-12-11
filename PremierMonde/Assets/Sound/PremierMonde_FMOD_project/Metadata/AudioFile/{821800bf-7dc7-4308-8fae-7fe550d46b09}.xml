@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{821800bf-7dc7-4308-8fae-7fe550d46b09}">
+		<property name="assetPath">
+			<value>tambour_sound1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.5277916666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{85b91bb8-45cc-4eca-b281-d3ee15b305c5}</destination>
+		</relationship>
+	</object>
+</objects>
