@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: f70ccd81c3250154797d5e4ba2a24d75
+=======
+guid: 1c274d688a36a2344bb7c254ef3570a7
+>>>>>>> Transition_GrabObjects
 TextScriptImporter:
   externalObjects: {}
   userData: 

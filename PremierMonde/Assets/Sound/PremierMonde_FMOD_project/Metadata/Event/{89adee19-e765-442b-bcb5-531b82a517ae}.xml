@@ -75,6 +75,10 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{f48aa02e-6fa1-4375-aae2-3090a0876e5a}">
+<<<<<<< HEAD
+=======
+		<property name="name" />
+>>>>>>> Transition_GrabObjects
 		<property name="playlistMode">
 			<value>1</value>
 		</property>
@@ -96,6 +100,10 @@
 	<object class="MixerBusEffectChain" id="{994cdb4e-463e-41b5-be13-91b2690ac430}">
 		<relationship name="effects">
 			<destination>{4489fd91-af5f-4eac-8c02-157c68e2482b}</destination>
+<<<<<<< HEAD
+=======
+			<destination>{7d1a8d4c-62c6-4b52-be03-45dc7d13be07}</destination>
+>>>>>>> Transition_GrabObjects
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{add314eb-8873-4d88-bcf8-652b1ec738c5}" />
@@ -131,4 +139,18 @@
 	</object>
 	<object class="MixerBusFader" id="{e1c64773-3a70-4cc7-8358-fc7c52770c0d}" />
 	<object class="MixerBusFader" id="{4489fd91-af5f-4eac-8c02-157c68e2482b}" />
+<<<<<<< HEAD
+=======
+	<object class="SFXReverbEffect" id="{7d1a8d4c-62c6-4b52-be03-45dc7d13be07}">
+		<property name="decayTime">
+			<value>500</value>
+		</property>
+		<property name="wetLevel">
+			<value>-13.5</value>
+		</property>
+		<property name="dryLevel">
+			<value>-3</value>
+		</property>
+	</object>
+>>>>>>> Transition_GrabObjects
 </objects>

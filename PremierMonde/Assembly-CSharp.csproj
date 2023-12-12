@@ -60,53 +60,141 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\Scripts\AbstractDreamMusicPlayer.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Scripts\DayNightCycle.cs" />
     <Compile Include="Assets\Scripts\XRPlatformControllerSetup.cs" />
+    <Compile Include="Assets\Scripts\SpritesRotation.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\Packages\Simple Scene Fade Load System\Scripts\Fader.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\Scripts\HandPresence.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\Scripts\TriggerTambour.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\Packages\AC Little Enchant Mesh VFX\Demo\Demo Script\DemoScript.cs" />
     <Compile Include="Assets\Scripts\AbstractDreamMusicMaster.cs" />
+    <Compile Include="Assets\Scripts\InputManager.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\PlayerTracker.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+    <Compile Include="Assets\Packages\Simple Scene Fade Load System\Scripts\Initiate.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+    <Compile Include="Assets\Scripts\SceneController.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Scripts\charactercontroller1stPerson.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Teleportation.cs" />
+    <Compile Include="Assets\Packages\Simple Scene Fade Load System\Demo (You don&apos;t have to import this folder)\DemoScript.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\DrumBehaviour.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Workspace.xml" />
+<<<<<<< HEAD
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{821800bf-7dc7-4308-8fae-7fe550d46b09}.xml" />
+=======
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+>>>>>>> Transition_GrabObjects
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{50a55bbd-5a2a-40b3-85f8-ee631fb3e501}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\EffectPresetFolder\{12cc17d5-4995-4e7c-8830-cf353f792600}.xml" />
+    <None Include="Assets\Packages\Simple Scene Fade Load System\ReadMeFirst.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\SandboxFolder\{fa1c7e98-5195-482a-9b0b-2baa5e527967}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{82e57734-73b5-4588-b8e7-23a34912dc66}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\SnapshotGroup\{5e614fd3-58c9-4ebd-ab24-0e0f989deb60}.xml" />
+<<<<<<< HEAD
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{c1d0cb34-5da5-433a-9333-5398d78b6123}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Platform\{afe33dad-bb85-42bb-a948-c59d15189a9b}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{75e23d7a-7731-4d51-9c53-698dfbe06ef4}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Tags.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{a3588ce9-28d6-43ec-9eb0-3b97f6508d47}.xml" />
+=======
+    <None Include="Assets\Packages\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Platform\{afe33dad-bb85-42bb-a948-c59d15189a9b}.xml" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{c4082613-99b2-45cb-9ce8-ef21a9fc8130}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Tags.xml" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\Packages\AC Little Enchant Mesh VFX\Read Me.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+>>>>>>> Transition_GrabObjects
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{6ca2bab8-ce48-4269-b636-8b75f0f9b76d}.xml" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{40f13555-2f6e-4302-b9ca-d87cecc9df98}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\EncodingSetting\{a9a1ab8d-1584-4865-9726-8f4d3f7dff95}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{ae450843-fc90-4d1c-8046-03297d59860b}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Return\{a08b0bcb-56d2-4960-be49-47b3e6435454}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{d3669318-f303-46df-8745-3bcf815433a7}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{708f38ef-5853-4352-b5d7-9fa5ca6b048e}.xml" />
+    <None Include="Assets\Packages\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Blend.shader" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{cf2f9dda-ef7e-4c9d-8f08-54d83119952d}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{8e9402ae-7f73-417b-a89c-72ea33529e35}.xml" />
+<<<<<<< HEAD
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{89adee19-e765-442b-bcb5-531b82a517ae}.xml" />
+=======
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+>>>>>>> Transition_GrabObjects
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{e2fd34bf-1ab1-4875-9a7f-43e105a0df05}.xml" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Bank\{261f662b-d7ff-4bce-b26b-ba4d69d41e87}.xml" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{51919e98-a005-4995-acd2-ab5ea3b5b0d1}.xml" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{24fce2ab-e2de-4d40-9a80-3a9c095820a7}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{c807a970-6daa-4274-bf89-a84e8a7a0a2c}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Mixer.xml" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Master.xml" />
+<<<<<<< HEAD
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{4506c3fc-93d0-4a63-bd83-85dcf1c4b7e7}.xml" />
+=======
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{89adee19-e765-442b-bcb5-531b82a517ae}.xml" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+>>>>>>> Transition_GrabObjects
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{c2585dea-d12f-4c0a-a665-7bdd614babf8}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{76ec741e-c62f-4aa1-8876-44b39bbae65f}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{10bd91e8-0b55-4c1f-9da6-e4ae79315c74}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Asset\{85b91bb8-45cc-4eca-b281-d3ee15b305c5}.xml" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\BankFolder\{f76fa5b6-f8e6-466f-bb3c-44d2ec72838b}.xml" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\EventFolder\{41bc5c68-4063-4a22-860c-16b0852b5577}.xml" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\ParameterPresetFolder\{843ddf21-910d-493d-b056-1943241b060d}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\ProfilerFolder\{4720f665-2841-494a-b925-b205b45c33ff}.xml" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1119,6 +1207,10 @@
       <Project>{7B2C8A78-CEAA-F274-34D1-7AF00F7E38C4}</Project>
       <Name>FMODUnityEditor</Name>
     </ProjectReference>
+    <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
+      <Project>{44144552-DF5D-B844-8391-B4EE4A3663CD}</Project>
+      <Name>Boxophobic.Utils.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="FMODUnityResonance.csproj">
       <Project>{24436693-D6B3-2285-8D22-D46F9C53C56C}</Project>
       <Name>FMODUnityResonance</Name>
@@ -1134,6 +1226,14 @@
     <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.Hands.Editor.csproj">
       <Project>{D417AEEC-7AE1-057D-9511-41E3CF46549F}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.Hands.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
+      <Project>{FED3A4F8-552B-8905-F5B6-963A933727E0}</Project>
+      <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
+      <Project>{06D21103-14FE-A735-3E89-6CC385C6EE1A}</Project>
+      <Name>Boxophobic.Utils.Scripts</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.Hands.Samples.VisualizerSample.csproj">
       <Project>{9975EC59-F7CD-DDB6-D239-E3857916BB98}</Project>

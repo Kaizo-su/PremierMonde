@@ -81,6 +81,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1724
+--- !u!114 &-2058738064007187598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/campfire
+  m_EditorClassIdentifier: 
+  Path: event:/campfire
+  Guid:
+    Data1: -818962982
+    Data2: 1285418878
+    Data3: -665581425
+    Data4: 764746033
+  Banks:
+  - {fileID: 2015090859716017203}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 58017
+--- !u!114 &-1773376213356513168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/campfireMusic
+  m_EditorClassIdentifier: 
+  Path: event:/campfireMusic
+  Guid:
+    Data1: -1006098925
+    Data2: 1170971058
+    Data3: 569370780
+    Data4: 813825193
+  Banks:
+  - {fileID: 2015090859716017203}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 99999
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,20 +151,29 @@ MonoBehaviour:
   - {fileID: 1735390884572268066}
   - {fileID: 2015090859716017203}
   EditorEvents:
-  - {fileID: 7574354803157688306}
   - {fileID: -3243232309350179277}
   - {fileID: -3042020902113843796}
   - {fileID: 4642225917007490104}
   - {fileID: 4547409717355936443}
   - {fileID: -6505934605048397523}
   - {fileID: 2887501965249546322}
+<<<<<<< HEAD
   - {fileID: 904736957406702388}
+=======
+  - {fileID: -1773376213356513168}
+  - {fileID: 8761346138894729145}
+  - {fileID: -2058738064007187598}
+>>>>>>> Transition_GrabObjects
   EditorParameters: []
   MasterBanks:
   - {fileID: 2015090859716017203}
   StringsBanks:
   - {fileID: 1735390884572268066}
+<<<<<<< HEAD
   cacheTime: 638379287463482042
+=======
+  cacheTime: 638379664225391355
+>>>>>>> Transition_GrabObjects
   cacheVersion: 131609
 --- !u!114 &904736957406702388
 MonoBehaviour:
@@ -154,10 +217,17 @@ MonoBehaviour:
   Path: Assets/Sound/PremierMonde_FMOD_project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
+<<<<<<< HEAD
   lastModified: 638379287463482042
   FileSizes:
   - Name: Desktop
     Value: 1070
+=======
+  lastModified: 638379664225391355
+  FileSizes:
+  - Name: Desktop
+    Value: 1118
+>>>>>>> Transition_GrabObjects
   Exists: 1
 --- !u!114 &2015090859716017203
 MonoBehaviour:
@@ -174,10 +244,17 @@ MonoBehaviour:
   Path: Assets/Sound/PremierMonde_FMOD_project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
+<<<<<<< HEAD
   lastModified: 638379287463446286
   FileSizes:
   - Name: Desktop
     Value: 1010144
+=======
+  lastModified: 638379664225361345
+  FileSizes:
+  - Name: Desktop
+    Value: 2185888
+>>>>>>> Transition_GrabObjects
   Exists: 1
 --- !u!114 &2887501965249546322
 MonoBehaviour:
@@ -260,7 +337,11 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1850
+<<<<<<< HEAD
 --- !u!114 &7574354803157688306
+=======
+--- !u!114 &8761346138894729145
+>>>>>>> Transition_GrabObjects
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270,20 +351,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Campfire
+  m_Name: event:/drum
   m_EditorClassIdentifier: 
-  Path: event:/Campfire
+  Path: event:/drum
   Guid:
-    Data1: -818962982
-    Data2: 1285418878
-    Data3: -665581425
-    Data4: 764746033
+    Data1: -1985090023
+    Data2: 1143727973
+    Data3: 458470844
+    Data4: -1374182014
   Banks:
   - {fileID: 2015090859716017203}
-  IsStream: 1
-  Is3D: 1
+  IsStream: 0
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 58017
+  Length: 1000
