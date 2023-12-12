@@ -8,10 +8,11 @@ public class charactercontroller1stPerson : MonoBehaviour
     public byte sensibility = 13;
 
     private int soundsDuration = 20;
-    private int turningAmplitude = 20;
+    private int turningAmplitude = 40;
     private int timer;
 
-    private float TurningSensibility = 0.5f;
+    private float turningSensibility = 0.5f;
+    private float speed = 0.5f;
 
     private bool isTurning;
 
@@ -77,20 +78,20 @@ public class charactercontroller1stPerson : MonoBehaviour
             T_Camera.localEulerAngles = new Vector3(0, T_Camera.localEulerAngles.y + Input.GetAxis("R_Horizontal") * sensibility, 0);
         }*/
 
-        if (!isTurning && Math.Abs(Input.GetAxis("R_Horizontal")) > TurningSensibility)
+        if (!isTurning && Math.Abs(Input.GetAxis("R_Horizontal")) > turningSensibility)
         {
-            if (Input.GetAxis("R_Horizontal") > TurningSensibility)
+            if (Input.GetAxis("R_Horizontal") > turningSensibility)
             {
                 T_Camera.localEulerAngles = new Vector3(0, T_Camera.localEulerAngles.y + turningAmplitude, 0);
             }
-            else if(Input.GetAxis("R_Horizontal") < - TurningSensibility)
+            else if(Input.GetAxis("R_Horizontal") < -turningSensibility)
             {
                 T_Camera.localEulerAngles = new Vector3(0, T_Camera.localEulerAngles.y - turningAmplitude, 0);
             }
             isTurning = true;
         }
 
-        if (isTurning && Math.Abs(Input.GetAxis("R_Horizontal")) < TurningSensibility && Math.Abs(Input.GetAxis("R_Horizontal")) > - TurningSensibility)
+        if (isTurning && Math.Abs(Input.GetAxis("R_Horizontal")) < turningSensibility && Math.Abs(Input.GetAxis("R_Horizontal")) > - turningSensibility)
         {
             isTurning = false;
         }
@@ -98,7 +99,7 @@ public class charactercontroller1stPerson : MonoBehaviour
         // Contr�le les d�placements
         if (Math.Abs(Input.GetAxis("Horizontal")) > 0.1 || Math.Abs(Input.GetAxis("Vertical")) > 0.1)
         {
-            Vector3 Direction = (new Vector3(Input.GetAxis("Horizontal"), 0, -Input.GetAxis("Vertical")) / 5);
+            Vector3 Direction = (new Vector3(Input.GetAxis("Horizontal"), 0, -Input.GetAxis("Vertical")) / 5) * .8f;
 
             CC_3rdPerson.Move(Quaternion.Euler(0, T_Camera.localEulerAngles.y, 0) * Direction);
             CC_3rdPerson.Move(Vector3.down);
