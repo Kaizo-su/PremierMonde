@@ -314,6 +314,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8086408303038569420, guid: 26547f206390d8b4fa15dc1dce289c9c,
         type: 3}
+      propertyPath: id
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086408303038569420, guid: 26547f206390d8b4fa15dc1dce289c9c,
+        type: 3}
       propertyPath: melody
       value: dreamMelody_fragment1
       objectReference: {fileID: 0}
@@ -419,6 +424,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086408303038569420, guid: 26547f206390d8b4fa15dc1dce289c9c,
+        type: 3}
+      propertyPath: id
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8662085614218097514, guid: 26547f206390d8b4fa15dc1dce289c9c,
         type: 3}
@@ -606,6 +616,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8086408303038569420, guid: 26547f206390d8b4fa15dc1dce289c9c,
+        type: 3}
+      propertyPath: id
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8662085614218097514, guid: 26547f206390d8b4fa15dc1dce289c9c,
         type: 3}
       propertyPath: m_Name
@@ -781,6 +796,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086408303038569420, guid: 26547f206390d8b4fa15dc1dce289c9c,
+        type: 3}
+      propertyPath: id
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8662085614218097514, guid: 26547f206390d8b4fa15dc1dce289c9c,
         type: 3}
