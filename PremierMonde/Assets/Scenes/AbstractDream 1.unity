@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 5aa02395bf8f9bc43a5ba2851abca498,
+    type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -779,6 +780,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8086408303038569420, guid: 26547f206390d8b4fa15dc1dce289c9c,
+        type: 3}
+      propertyPath: id
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8662085614218097514, guid: 26547f206390d8b4fa15dc1dce289c9c,
         type: 3}
       propertyPath: m_Name
@@ -803,6 +809,8 @@ GameObject:
   m_Component:
   - component: {fileID: 413684488}
   - component: {fileID: 413684489}
+  - component: {fileID: 413684490}
+  - component: {fileID: 413684491}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Untagged
@@ -877,6 +885,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &413684490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413684487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65683fa85b4eb444585188eddb9a1881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &413684491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413684487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1888434415
+      Data2: 1129470035
+      Data3: -1516251211
+      Data4: -1912312886
+    Path: event:/dreamMelody_final
+  Event: 
+  PlayEvent: 11
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &460206955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1062,6 +1113,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086408303038569420, guid: 26547f206390d8b4fa15dc1dce289c9c,
+        type: 3}
+      propertyPath: id
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8662085614218097514, guid: 26547f206390d8b4fa15dc1dce289c9c,
         type: 3}
@@ -1707,6 +1763,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086408303038569420, guid: 26547f206390d8b4fa15dc1dce289c9c,
+        type: 3}
+      propertyPath: id
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8662085614218097514, guid: 26547f206390d8b4fa15dc1dce289c9c,
         type: 3}

@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/CampFire.unity
-    guid: 0e1215b7c19864d44931dac3c94732ac
+    path: Assets/Scenes/CampFire 1.unity
+    guid: e94795050eeddf943be8c7c955870c83
   - enabled: 1
-    path: Assets/Scenes/AbstractDream.unity
-    guid: 33ffae992431ef647a6d8965519ebd2e
+    path: Assets/Scenes/AbstractDream 1.unity
+    guid: 67b1922754cd7204685783c0448d4539
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,
       type: 2}
