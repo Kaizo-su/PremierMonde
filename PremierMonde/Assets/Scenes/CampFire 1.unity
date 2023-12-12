@@ -2581,6 +2581,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -462981019419857548, guid: 462f7d4e951fd1d43b86577fbb4c659e, type: 3}
+--- !u!114 &1021901228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021901223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1006098925
+      Data2: 1170971058
+      Data3: 569370780
+      Data4: 813825193
+    Path: event:/campfireMusic
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &1045461984 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8363019468681290374, guid: 3062959908fc2a448890fadf056545a8,
@@ -9320,6 +9351,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1021901227}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 462f7d4e951fd1d43b86577fbb4c659e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1021901228}
   m_SourcePrefab: {fileID: 100100000, guid: 462f7d4e951fd1d43b86577fbb4c659e, type: 3}
 --- !u!1001 &1901122189
 PrefabInstance:

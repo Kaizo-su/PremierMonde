@@ -126,6 +126,7 @@
     <None Include="Assets\Packages\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Platform\{afe33dad-bb85-42bb-a948-c59d15189a9b}.xml" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{c4082613-99b2-45cb-9ce8-ef21a9fc8130}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Tags.xml" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
@@ -150,15 +151,18 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Bank\{261f662b-d7ff-4bce-b26b-ba4d69d41e87}.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{51919e98-a005-4995-acd2-ab5ea3b5b0d1}.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{24fce2ab-e2de-4d40-9a80-3a9c095820a7}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{c807a970-6daa-4274-bf89-a84e8a7a0a2c}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Mixer.xml" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Master.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Event\{89adee19-e765-442b-bcb5-531b82a517ae}.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{c2585dea-d12f-4c0a-a665-7bdd614babf8}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{76ec741e-c62f-4aa1-8876-44b39bbae65f}.xml" />
+    <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\AudioFile\{10bd91e8-0b55-4c1f-9da6-e4ae79315c74}.xml" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\Asset\{85b91bb8-45cc-4eca-b281-d3ee15b305c5}.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Sound\PremierMonde_FMOD_project\Metadata\BankFolder\{f76fa5b6-f8e6-466f-bb3c-44d2ec72838b}.xml" />
@@ -1182,13 +1186,13 @@
       <Project>{7B2C8A78-CEAA-F274-34D1-7AF00F7E38C4}</Project>
       <Name>FMODUnityEditor</Name>
     </ProjectReference>
-    <ProjectReference Include="FMODUnityResonance.csproj">
-      <Project>{24436693-D6B3-2285-8D22-D46F9C53C56C}</Project>
-      <Name>FMODUnityResonance</Name>
-    </ProjectReference>
     <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
       <Project>{44144552-DF5D-B844-8391-B4EE4A3663CD}</Project>
       <Name>Boxophobic.Utils.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="FMODUnityResonance.csproj">
+      <Project>{24436693-D6B3-2285-8D22-D46F9C53C56C}</Project>
+      <Name>FMODUnityResonance</Name>
     </ProjectReference>
     <ProjectReference Include="FMODUnity.csproj">
       <Project>{DBFC3B75-5DD6-5B94-EC64-9BE4B271BC6A}</Project>
