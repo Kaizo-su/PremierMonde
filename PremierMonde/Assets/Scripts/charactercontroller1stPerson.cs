@@ -12,7 +12,7 @@ public class charactercontroller1stPerson : MonoBehaviour
     private int timer;
 
     private float turningSensibility = 0.5f;
-    private float speed = 0.5f;
+    private float speed = 0.75f;
 
     private bool isTurning;
 
@@ -50,8 +50,6 @@ public class charactercontroller1stPerson : MonoBehaviour
                 StopCoroutine(Drum());
                 SoundsRange.enabled = false;
             }
-                
-
             StartCoroutine(Drum());
         }
     }
@@ -73,11 +71,6 @@ public class charactercontroller1stPerson : MonoBehaviour
     void FixedUpdate()
     {
         // Contr�le de la camera
-        /*if (Math.Abs(Input.GetAxis("R_Horizontal")) > 0.1 )
-        {
-            T_Camera.localEulerAngles = new Vector3(0, T_Camera.localEulerAngles.y + Input.GetAxis("R_Horizontal") * sensibility, 0);
-        }*/
-
         if (!isTurning && Math.Abs(Input.GetAxis("R_Horizontal")) > turningSensibility)
         {
             if (Input.GetAxis("R_Horizontal") > turningSensibility)
@@ -99,7 +92,7 @@ public class charactercontroller1stPerson : MonoBehaviour
         // Contr�le les d�placements
         if (Math.Abs(Input.GetAxis("Horizontal")) > 0.1 || Math.Abs(Input.GetAxis("Vertical")) > 0.1)
         {
-            Vector3 Direction = (new Vector3(Input.GetAxis("Horizontal"), 0, -Input.GetAxis("Vertical")) / 5) * .8f;
+            Vector3 Direction = (new Vector3(Input.GetAxis("Horizontal"), 0, -Input.GetAxis("Vertical")) / 5) * speed;
 
             CC_3rdPerson.Move(Quaternion.Euler(0, T_Camera.localEulerAngles.y, 0) * Direction);
             CC_3rdPerson.Move(Vector3.down);

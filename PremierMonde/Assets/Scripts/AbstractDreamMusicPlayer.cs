@@ -27,11 +27,15 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
 	private ParticleSystem EchoValidationGenerator;
 	private ParticleSystem EchoCompletedGenerator;
 	private ParticleSystem EchoErrorGenerator;
+	private Transform Aura;
 	private StudioEventEmitter fmodMelody;
 
     private static int progression = 0;
     private static GameObject MusicMaster;
     private static Transform Player;
+    private static Color Blue = new Color(.16f, .6f, .7f, .3f);
+    private static Color Green = new Color(.46f, .8f, .4f, .35f);
+    private static Color Red = new Color(.8f, .2f, .2f, .35f);
 
     // Start is called before the first frame update
     void Start()
@@ -54,12 +58,13 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
         EchoValidationGenerator = this.transform.GetChild(1).GetComponent<ParticleSystem>();
         EchoCompletedGenerator = this.transform.GetChild(2).GetComponent<ParticleSystem>();
         EchoErrorGenerator = this.transform.GetChild(3).GetComponent<ParticleSystem>();
+        Aura = this.transform.GetChild(4);
     }
 
     // Update is called once per fixed frame
     void FixedUpdate()
     {
-        Debug.Log(Vector3.Distance(this.transform.position, Player.position));
+        //Debug.Log(Vector3.Distance(this.transform.position, Player.position));
 
         if (Vector3.Distance(this.transform.position, Player.position) < 12)
         {
@@ -122,6 +127,7 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
                 {
                     //this.GetComponent<Renderer>().material.color = Color.green;
                     EchoCompletedGenerator.Play();
+                    Aura.GetChild(0).GetComponent<ParticleSystem>().startColor = Green;
                     progression++;
 
                     if (progression >= 4)
@@ -131,6 +137,7 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
                 {
                     progression = 0;
                     EchoErrorGenerator.Play();
+                    Aura.GetChild(0).GetComponent<ParticleSystem>().startColor = Red;
                 }
             }
         }
