@@ -1,3 +1,4 @@
+using FMODUnity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,20 +15,20 @@ public class AbstractDreamMusicMaster : MonoBehaviour
     public float[] Partition;
 
     private int timer;
-    private int id;
     private int index = 0;
     private int validation = 0;
     private bool isPlaying = false;
+    private bool isActivated = false;
 
     private ParticleSystem EchoWaveGenerator;
-
-    private static bool[] IDs;
+    private StudioEventEmitter fmodMelody;
 
     // Start is called before the first frame update
     void Start()
     {
-        id = (IDs == null ? 0 : IDs.Length);
-        Array.Resize(ref IDs, id + 1);
+        fmodMelody = this.GetComponent<StudioEventEmitter>();
+
+        this.transform.GetChild(1).GetComponent<SpriteRenderer>().enabled = false;
 
         timer = - validationRange;
         silenceBetweenLoops -= validationRange;
@@ -37,61 +38,69 @@ public class AbstractDreamMusicMaster : MonoBehaviour
     // Update is called once per fixed frame
     void FixedUpdate()
     {
-        // Manage time
-        if (timer >= melodyDuration + silenceBetweenLoops)
+        if (isActivated)
         {
-            timer = - validationRange;
-            index = 0;
-            validation = 0;
-        }
+            // Manage time
+            if (timer >= melodyDuration + silenceBetweenLoops)
+            {
+                timer = -validationRange;
+                index = 0;
+                validation = 0;
+            }
 
-        if (index < Partition.Length && timer == (int) (Partition[index] * melodyDuration) - validationRange)
-        {
-            EchoWaveGenerator.Play();
-        }
+            if (index < Partition.Length && timer == (int)(Partition[index] * melodyDuration) - validationRange)
+            {
+                EchoWaveGenerator.Play();
+            }
 
-        // Manage Melody
-        if (index < Partition.Length && timer == (int) (Partition[index] * melodyDuration))
-        {
-            
-            isPlaying = true;
-            index++;
-        }
-        else
-        {
-            isPlaying = false;
-        }
 
-        // Manage Clock
-        timer++;
+            // Manage Melody
 
+            if (timer == 0)
+            {
+                fmodMelody.Play();
+            }
+
+            if (index < Partition.Length && timer == (int)(Partition[index] * melodyDuration))
+            {
+
+                isPlaying = true;
+                index++;
+            }
+            else
+            {
+                isPlaying = false;
+            }
+
+            // Manage Clock
+            timer++;
+        }
+        
     }
 
     private void OnTriggerStay(Collider other)
     {
+        if (!isActivated)
+        {
+            fmodMelody.Play();
+            EchoWaveGenerator.Play();
+        }
 
         if (isPlaying)
         {
-            validation++;
-
+            
 
             // Victory validation
             if (validation == Partition.Length)
             {
 
-                if (id == 0 || IDs[id - 1] == true)
-                {
-                    IDs[id] = true;
-
-                    foreach(bool i in IDs)
-                    {
-                        if (!i)
-                        {
-                            return;
-                        }
-                    }
-                }
             }
         }
+    }
+
+    public void Active()
+    {
+        this.transform.GetChild(1).GetComponent<SpriteRenderer>().enabled = true;
+        isActivated = true;
     }
 }

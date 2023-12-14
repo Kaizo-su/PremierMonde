@@ -31,6 +31,7 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
 	private StudioEventEmitter fmodMelody;
 
     private static int progression = 0;
+    private static bool isResing = false;
     private static GameObject MusicMaster;
     private static Transform Player;
     private static Color Blue = new Color(.16f, .6f, .7f, .3f);
@@ -43,7 +44,7 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
         if(MusicMaster == null)
         {
             MusicMaster = GameObject.Find("AbstractDreamMusicMaster");
-            MusicMaster.SetActive(false);
+            //MusicMaster.SetActive(false);
         }
         
 	    fmodMelody = this.GetComponent<StudioEventEmitter>();
@@ -66,51 +67,60 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
     {
         //Debug.Log(Vector3.Distance(this.transform.position, Player.position));
 
-        if (Vector3.Distance(this.transform.position, Player.position) < 12)
+        if(progression <= id)
         {
-            // Manage time
-            if (timer >= melodyDuration + silenceBetweenLoops)
+            if (Vector3.Distance(this.transform.position, Player.position) < 12)
+            {
+                // Manage time
+                if (timer >= melodyDuration + silenceBetweenLoops)
+                {
+                    timer = -validationRange;
+                    index = 0;
+                    validation = 0;
+                }
+
+                if (index < Partition.Length && timer == (int)(Partition[index] * melodyDuration) - validationRange)
+                {
+                    EchoWaveGenerator.Play();
+                }
+
+                // Manage Melody
+
+                if (timer == 0)
+                {
+                    fmodMelody.Play();
+                }
+
+                if (index < Partition.Length && timer == (int)(Partition[index] * melodyDuration))
+                {
+                    isPlaying = true;
+                    index++;
+                }
+                else
+                {
+                    isPlaying = false;
+                }
+
+                // Manage Clock
+                timer++;
+            }
+            else
             {
                 timer = -validationRange;
                 index = 0;
                 validation = 0;
             }
 
-            if (index < Partition.Length && timer == (int)(Partition[index] * melodyDuration) - validationRange)
-            {
-                EchoWaveGenerator.Play();
-            }
-
-            // Manage Melody
-
-            if (timer == 0)
-            {
-                fmodMelody.Play();
-            }
-
-            if (index < Partition.Length && timer == (int)(Partition[index] * melodyDuration))
-            {
-                isPlaying = true;
-                index++;
-            }
-            else
-            {
-                isPlaying = false;
-            }
-
-            // Manage Clock
-            timer++;
         }
-        else
+
+        if (isResing)
         {
-            timer = - validationRange;
-            index = 0;
-            validation = 0;
+            StartCoroutine(Reset());
         }
         
-
     }
 
+    [Obsolete]
     private void OnTriggerStay(Collider other)
     {
         // Collision avec la sphere qui defini la porté du son
@@ -131,15 +141,24 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
                     progression++;
 
                     if (progression >= 4)
-                        MusicMaster.SetActive(true);
+                        MusicMaster.GetComponent<AbstractDreamMusicMaster>().Active();
                 }
                 else
                 {
                     progression = 0;
                     EchoErrorGenerator.Play();
                     Aura.GetChild(0).GetComponent<ParticleSystem>().startColor = Red;
+                    isResing = true;
                 }
             }
         }
+    }
+
+    [Obsolete]
+    IEnumerator Reset()
+    {
+        yield return new WaitForSeconds(1);
+        Aura.GetChild(0).GetComponent<ParticleSystem>().startColor = Blue;
+        isResing = false;
     }
 }

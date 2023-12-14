@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1432914145079501641}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4899,7 +4899,6 @@ GameObject:
   - component: {fileID: 5959579986912441190}
   - component: {fileID: 6511795395104658017}
   - component: {fileID: 6380719020721536016}
-  - component: {fileID: 4540939660563765972}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Untagged
@@ -4916,11 +4915,11 @@ Transform:
   m_GameObject: {fileID: 5155486355748254982}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.22, y: -1.67, z: 0.44}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2935956770260247246}
+  m_Father: {fileID: 4907857700826694213}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6511795395104658017
 SpriteRenderer:
@@ -4986,69 +4985,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65683fa85b4eb444585188eddb9a1881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4540939660563765972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5155486355748254982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 1888434415
-      Data2: 1129470035
-      Data3: -1516251211
-      Data4: -1912312886
-    Path: event:/dreamMelody_final
-  Event: 
-  PlayEvent: 11
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!1 &7000041486431897350
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2935956770260247246}
-  m_Layer: 0
-  m_Name: Wolf
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2935956770260247246
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7000041486431897350}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.08666675, y: 1.065, z: 0.18666713}
-  m_LocalScale: {x: 0.6666667, y: 0.5, z: 0.6666667}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5959579986912441190}
-  m_Father: {fileID: 4907857700826694213}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8662085614218097514
 GameObject:
   m_ObjectHideFlags: 0
@@ -5063,6 +4999,7 @@ GameObject:
   - component: {fileID: 7123901487411623260}
   - component: {fileID: 3393147635486124087}
   - component: {fileID: 4379591854859328235}
+  - component: {fileID: 1354621988406986671}
   m_Layer: 0
   m_Name: AbstractDreamMusicMaster
   m_TagString: Untagged
@@ -5080,11 +5017,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1.5, y: 2, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 475587198817564525}
-  - {fileID: 2935956770260247246}
+  - {fileID: 5959579986912441190}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2798308405640402936
@@ -5205,3 +5142,34 @@ MonoBehaviour:
   Partition:
   - 0
   - 0.5
+--- !u!114 &1354621988406986671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8662085614218097514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1888434415
+      Data2: 1129470035
+      Data3: -1516251211
+      Data4: -1912312886
+    Path: event:/dreamMelody_final
+  Event: 
+  PlayEvent: 11
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

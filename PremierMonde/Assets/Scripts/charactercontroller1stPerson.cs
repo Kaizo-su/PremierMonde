@@ -32,9 +32,6 @@ public class charactercontroller1stPerson : MonoBehaviour
         CC_3rdPerson = this.GetComponent<CharacterController>();
 
         SoundsRange.enabled = false;
-
-        Debug.Log(SoundsRange.name);
-
     }
 
     // Update is called once per frame
