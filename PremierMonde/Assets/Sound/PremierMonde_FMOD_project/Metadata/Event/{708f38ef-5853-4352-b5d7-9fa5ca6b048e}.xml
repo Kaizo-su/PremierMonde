@@ -5,7 +5,7 @@
 			<value>dreamMelody_final</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{41bc5c68-4063-4a22-860c-16b0852b5577}</destination>
@@ -113,6 +113,7 @@
 	<object class="MixerBusEffectChain" id="{5d1a1169-3d4b-44a6-9c78-e218211d4b8e}">
 		<relationship name="effects">
 			<destination>{771ebf52-e119-4a3c-b9cc-c202cd71d21d}</destination>
+			<destination>{d0a6c408-49a9-4c6a-ac99-25845e239ade}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{64bceaf3-403c-41bd-8290-65fdd5960cdb}" />
@@ -124,5 +125,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{c558f3e5-1809-47ff-a02f-24c627c2514e}" />
 	<object class="MixerBusFader" id="{771ebf52-e119-4a3c-b9cc-c202cd71d21d}" />
+	<object class="SpatialiserEffect" id="{d0a6c408-49a9-4c6a-ac99-25845e239ade}" />
 	<object class="MixerBusFader" id="{31a56ffd-3519-47d0-afef-28f5a3ead930}" />
 </objects>

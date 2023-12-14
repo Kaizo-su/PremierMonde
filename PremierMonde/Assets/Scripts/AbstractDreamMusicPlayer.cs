@@ -124,7 +124,7 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         // Collision avec la sphere qui defini la porté du son
-        if (isPlaying)
+        if (isPlaying && progression <= id)
         {
             EchoValidationGenerator.Play();
             validation++;

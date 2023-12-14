@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Tutorials.Core.Editor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AbstractDreamMusicMaster : MonoBehaviour
 {
@@ -18,9 +19,11 @@ public class AbstractDreamMusicMaster : MonoBehaviour
     private int index = 0;
     private int validation = 0;
     private bool isPlaying = false;
+    private bool isPlayed = false;
     private bool isActivated = false;
 
     private ParticleSystem EchoWaveGenerator;
+    private ParticleSystem EchoValidationGenerator;
     private StudioEventEmitter fmodMelody;
 
     // Start is called before the first frame update
@@ -33,6 +36,7 @@ public class AbstractDreamMusicMaster : MonoBehaviour
         timer = - validationRange;
         silenceBetweenLoops -= validationRange;
         EchoWaveGenerator = this.transform.GetChild(0).GetComponent<ParticleSystem>();
+        EchoValidationGenerator = this.transform.GetChild(2).GetComponent<ParticleSystem>();
     }
 
     // Update is called once per fixed frame
@@ -80,20 +84,25 @@ public class AbstractDreamMusicMaster : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (!isActivated)
+        if (!isActivated && !isPlayed)
         {
-            fmodMelody.Play();
-            EchoWaveGenerator.Play();
+            isPlayed = true;
+            StartCoroutine(PlayingSample());
         }
 
-        if (isPlaying)
+        if (isActivated && isPlaying)
         {
-            
+            EchoValidationGenerator.Play();
+            validation++;
 
             // Victory validation
             if (validation == Partition.Length)
             {
 
+                if (validation == Partition.Length)
+                {
+                    SceneManager.LoadScene("CampFire 1");
+                }
             }
         }
     }
@@ -102,5 +111,13 @@ public class AbstractDreamMusicMaster : MonoBehaviour
     {
         this.transform.GetChild(1).GetComponent<SpriteRenderer>().enabled = true;
         isActivated = true;
+    }
+
+    IEnumerator PlayingSample()
+    {
+        fmodMelody.Play();
+        EchoWaveGenerator.Play();
+        yield return new WaitForSeconds(5);
+        isPlayed = false;
     }
 }
