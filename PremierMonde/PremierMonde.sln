@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.flipbookgames.scriptinspector3", "com.flipbookgames.scriptinspector3.csproj", "{4B6D380B-B18F-CDD3-3C1B-F334321DFD88}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.XR.Interaction.Toolkit.Samples.Hands", "Unity.XR.Interaction.Toolkit.Samples.Hands.csproj", "{6F7D81FD-D845-B095-47FF-2D56DC3800BB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMODUnity", "FMODUnity.csproj", "{DBFC3B75-5DD6-5B94-EC64-9BE4B271BC6A}"
@@ -33,6 +35,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B6D380B-B18F-CDD3-3C1B-F334321DFD88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B6D380B-B18F-CDD3-3C1B-F334321DFD88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B6D380B-B18F-CDD3-3C1B-F334321DFD88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B6D380B-B18F-CDD3-3C1B-F334321DFD88}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6F7D81FD-D845-B095-47FF-2D56DC3800BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6F7D81FD-D845-B095-47FF-2D56DC3800BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F7D81FD-D845-B095-47FF-2D56DC3800BB}.Release|Any CPU.ActiveCfg = Release|Any CPU

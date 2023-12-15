@@ -48,12 +48,12 @@ MonoBehaviour:
   Banks:
   - {fileID: 1088446436815021228}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 7222
+  Length: 10000
 --- !u!114 &-7325462050823180770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,7 +161,34 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1850
+  Length: 3750
+--- !u!114 &-2514970435560921258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_yes
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_yes
+  Guid:
+    Data1: -888714199
+    Data2: 1321718297
+    Data3: -265492818
+    Data4: -1539522712
+  Banks:
+  - {fileID: 1088446436815021228}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4500
 --- !u!114 &-955691667472128936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,7 +215,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1724
+  Length: 3750
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,13 +241,70 @@ MonoBehaviour:
   - {fileID: -7922937504598072144}
   - {fileID: -7932440167633890851}
   - {fileID: -4338975495895059105}
+  - {fileID: -2514970435560921258}
+  - {fileID: 386948400296251353}
+  - {fileID: 148713100085628973}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1088446436815021228}
   StringsBanks:
   - {fileID: 4324548862147331356}
-  cacheTime: 638381828850961241
+  cacheTime: 638382148430054906
   cacheVersion: 131609
+--- !u!114 &148713100085628973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX_non
+  m_EditorClassIdentifier: 
+  Path: event:/SFX_non
+  Guid:
+    Data1: 1984521651
+    Data2: 1120345067
+    Data3: 122579851
+    Data4: -1019137474
+  Banks:
+  - {fileID: 1088446436815021228}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3875
+--- !u!114 &386948400296251353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/epreuveMusic
+  m_EditorClassIdentifier: 
+  Path: event:/epreuveMusic
+  Guid:
+    Data1: 546645623
+    Data2: 1307258612
+    Data3: 1969488312
+    Data4: -368289506
+  Banks:
+  - {fileID: 1088446436815021228}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 36000
 --- !u!114 &1088446436815021228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,10 +320,10 @@ MonoBehaviour:
   Path: Assets/Sound/PremierMonde_FMOD_project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638381828850951555
+  lastModified: 638382148430018185
   FileSizes:
   - Name: Desktop
-    Value: 2258656
+    Value: 2911712
   Exists: 1
 --- !u!114 &3179681264279375214
 MonoBehaviour:
@@ -267,7 +351,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2298
+  Length: 3750
 --- !u!114 &4324548862147331356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,10 +367,10 @@ MonoBehaviour:
   Path: Assets/Sound/PremierMonde_FMOD_project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638381828850961241
+  lastModified: 638382148430054906
   FileSizes:
   - Name: Desktop
-    Value: 1118
+    Value: 1244
   Exists: 1
 --- !u!114 &8297295842942494560
 MonoBehaviour:
@@ -314,4 +398,4 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1724
+  Length: 3750

@@ -223,7 +223,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.16, g: 0.6, b: 0.7, a: 0.29803923}
+      maxColor: {r: 0.34897822, g: 0.16078432, b: 0.69803923, a: 0.29803923}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9969,7 +9969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75bf5aa011c68d44fa99e25a14733154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  melodyDuration: 60
+  melodyDuration: 600
   validationRange: 20
   silenceBetweenLoops: 60
   Partition:

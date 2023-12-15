@@ -1,4 +1,4 @@
-using FMODUnity;
+﻿using FMODUnity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -25,6 +25,9 @@ public class AbstractDreamMusicMaster : MonoBehaviour
     private ParticleSystem EchoWaveGenerator;
     private ParticleSystem EchoValidationGenerator;
     private StudioEventEmitter fmodMelody;
+	
+	// 0.083
+
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +45,7 @@ public class AbstractDreamMusicMaster : MonoBehaviour
     // Update is called once per fixed frame
     void FixedUpdate()
     {
-        if (isActivated)
+	    /*if (isActivated)
         {
             // Manage time
             if (timer >= melodyDuration + silenceBetweenLoops)
@@ -78,7 +81,7 @@ public class AbstractDreamMusicMaster : MonoBehaviour
 
             // Manage Clock
             timer++;
-        }
+	    }*/
         
     }
 
@@ -90,10 +93,12 @@ public class AbstractDreamMusicMaster : MonoBehaviour
             StartCoroutine(PlayingSample());
         }
 
-        if (isActivated && isPlaying)
+	    if (isActivated && !isPlaying)
         {
-            EchoValidationGenerator.Play();
-            validation++;
+		    //EchoValidationGenerator.Play();
+	        validation++;
+	        
+	        StartCoroutine(PlayingFinal());
 
             // Victory validation
             if (validation == Partition.Length)
@@ -101,7 +106,7 @@ public class AbstractDreamMusicMaster : MonoBehaviour
 
                 if (validation == Partition.Length)
                 {
-                    SceneManager.LoadScene("CampFire 1");
+                    
                 }
             }
         }
@@ -119,5 +124,15 @@ public class AbstractDreamMusicMaster : MonoBehaviour
         EchoWaveGenerator.Play();
         yield return new WaitForSeconds(5);
         isPlayed = false;
+    }
+
+	IEnumerator PlayingFinal()
+	{
+		isPlaying = true;
+        fmodMelody.Play();
+        EchoWaveGenerator.Play();
+	    yield return new WaitForSeconds(8);
+	    isPlayed = false;
+	    SceneManager.LoadScene("CampFire 1");
     }
 }

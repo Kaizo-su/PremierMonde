@@ -460,27 +460,57 @@ PrefabInstance:
     - target: {fileID: 4379591854859328235, guid: c9485f84c5a1ea640b898c8cfa589245,
         type: 3}
       propertyPath: melodyDuration
-      value: 300
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379591854859328235, guid: c9485f84c5a1ea640b898c8cfa589245,
+        type: 3}
+      propertyPath: validationRange
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379591854859328235, guid: c9485f84c5a1ea640b898c8cfa589245,
+        type: 3}
+      propertyPath: silenceBetweenLoops
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4379591854859328235, guid: c9485f84c5a1ea640b898c8cfa589245,
         type: 3}
       propertyPath: Partition.Array.size
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4379591854859328235, guid: c9485f84c5a1ea640b898c8cfa589245,
         type: 3}
       propertyPath: Partition.Array.data[1]
-      value: 0.25
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 4379591854859328235, guid: c9485f84c5a1ea640b898c8cfa589245,
         type: 3}
       propertyPath: Partition.Array.data[2]
-      value: 0.5
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: 4379591854859328235, guid: c9485f84c5a1ea640b898c8cfa589245,
         type: 3}
       propertyPath: Partition.Array.data[3]
-      value: 0.75
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379591854859328235, guid: c9485f84c5a1ea640b898c8cfa589245,
+        type: 3}
+      propertyPath: Partition.Array.data[4]
+      value: 0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379591854859328235, guid: c9485f84c5a1ea640b898c8cfa589245,
+        type: 3}
+      propertyPath: Partition.Array.data[5]
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379591854859328235, guid: c9485f84c5a1ea640b898c8cfa589245,
+        type: 3}
+      propertyPath: Partition.Array.data[6]
+      value: 0.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 4379591854859328235, guid: c9485f84c5a1ea640b898c8cfa589245,
+        type: 3}
+      propertyPath: Partition.Array.data[7]
+      value: 0.83
       objectReference: {fileID: 0}
     - target: {fileID: 4540939660563765972, guid: c9485f84c5a1ea640b898c8cfa589245,
         type: 3}
@@ -674,6 +704,11 @@ PrefabInstance:
         type: 3}
       propertyPath: melody
       value: dreamMelody_fragment1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086408303038569420, guid: 26547f206390d8b4fa15dc1dce289c9c,
+        type: 3}
+      propertyPath: melodyDuration
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8662085614218097514, guid: 26547f206390d8b4fa15dc1dce289c9c,
         type: 3}
@@ -1332,8 +1367,49 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8104881772098563362, guid: cab33b86918433b4ebc0fc0e5b1523a2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 728047779}
   m_SourcePrefab: {fileID: 100100000, guid: cab33b86918433b4ebc0fc0e5b1523a2, type: 3}
+--- !u!1 &728047778 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8104881772098563362, guid: cab33b86918433b4ebc0fc0e5b1523a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 728047777}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &728047779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728047778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 546645623
+      Data2: 1307258612
+      Data3: 1969488312
+      Data4: -368289506
+    Path: event:/epreuveMusic
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1005803375
 GameObject:
   m_ObjectHideFlags: 0

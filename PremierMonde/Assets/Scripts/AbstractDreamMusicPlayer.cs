@@ -29,6 +29,8 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
 	private ParticleSystem EchoErrorGenerator;
 	private Transform Aura;
 	private StudioEventEmitter fmodMelody;
+	private StudioEventEmitter fmodYES;
+	private StudioEventEmitter fmodNON;
 
     private static int progression = 0;
     private static bool isResing = false;
@@ -48,6 +50,8 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
         }
         
 	    fmodMelody = this.GetComponent<StudioEventEmitter>();
+	    fmodYES = this.transform.GetChild(2).GetComponent<StudioEventEmitter>();
+	    fmodNON = this.transform.GetChild(3).GetComponent<StudioEventEmitter>();
 
         timer = - validationRange;
         silenceBetweenLoops -= validationRange;
@@ -135,19 +139,22 @@ public class AbstractDreamMusicPlayer : MonoBehaviour
                 // Valide que celui qui joue est le bon
                 if (id == progression)
                 {
-                    //this.GetComponent<Renderer>().material.color = Color.green;
+	                // Validation Reussie
                     EchoCompletedGenerator.Play();
-                    Aura.GetChild(0).GetComponent<ParticleSystem>().startColor = Green;
+	                Aura.GetChild(0).GetComponent<ParticleSystem>().startColor = Green;
+	                fmodYES.Play();
                     progression++;
 
-                    if (progression >= 4)
+	                if (progression >= 4)
                         MusicMaster.GetComponent<AbstractDreamMusicMaster>().Active();
                 }
                 else
                 {
+                	// Validation Echec
                     progression = 0;
                     EchoErrorGenerator.Play();
-                    Aura.GetChild(0).GetComponent<ParticleSystem>().startColor = Red;
+	                Aura.GetChild(0).GetComponent<ParticleSystem>().startColor = Red;
+	                fmodNON.Play();
                     isResing = true;
                 }
             }

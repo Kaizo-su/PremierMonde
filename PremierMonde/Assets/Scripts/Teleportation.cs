@@ -22,7 +22,8 @@ public class Teleportation : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         Debug.Log(other.name);
-	    /*  SceneManager.LoadScene("AbstractDream"); */
-	    Initiate.Fade(scenename,loadToColor,transitionSpeed);
+	    /*  Initiate.Fade(scenename,loadToColor,transitionSpeed);; */
+	    SceneManager.LoadScene(scenename);
+	    
     }
 }
